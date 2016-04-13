@@ -1,0 +1,38 @@
+{
+    "db": {
+        "name": "db",
+        "connector": "memory"
+    },
+    "my_mongo": {
+        "name": "my_mongo",
+        "connector": "mongodb",
+        "host": "localhost",
+        "database": "blogDemo",
+        "username": "",
+        "password": "",
+        "port": 27017
+    },
+    "emailDs": {
+        "name": "emailDs",
+        "connector": "mail",
+        "transports": [{
+            "type": "smtp",
+            "host": "smtp.gmail.com",
+            "secure": true,
+            "port": 465,
+            "tls": {
+                "rejectUnauthorized": false
+            },
+            "auth": {
+                "user": "elinext.php@gmail.com",
+                "pass": "AKIAJ3BOYCTMIXD3J4AQ"
+            }
+        }]
+    },
+    "storage": {
+        "name": "storage",
+        "connector": "loopback-component-storage",
+        "provider": "filesystem",
+        "root": "./server/storage"
+    }
+}
